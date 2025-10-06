@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Disease Predictor</title>
+    <!-- Link to the shared CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- The form sends data to the /login route using the POST method -->
+        <form action="/login" method="POST">
+            <div class="form-header">
+                <h2>Disease Predictor</h2>
+            </div>
+            <h1>Sign In</h1>
+            <span>or use your account</span>
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Sign In</button>
+            <a href="/register" class="form-link">Don't have an account? Sign Up</a>
+        </form>
+    </div>
+</body>
+</html>

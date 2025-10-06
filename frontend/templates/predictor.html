@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Predictor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Disease Predictor</div>
+        <div class="navbar-links">
+            <a href="/predictor">Predictor</a>
+            <a href="/history">History</a>
+            <a href="/">Logout</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1>Symptom Checker</h1>
+        <p>Select your symptoms from the list below and click predict.</p>
+        
+        <form action="/predict" method="POST">
+            <div class="symptom-selector">
+                <label for="symptoms">Choose symptoms:</label>
+                <!-- In a real application, you would generate this list dynamically -->
+                <select name="symptoms" id="symptoms" multiple required>
+                    <option value="itching">Itching</option>
+                    <option value="skin_rash">Skin Rash</option>
+                    <option value="chills">Chills</option>
+                    <option value="joint_pain">Joint Pain</option>
+                    <option value="vomiting">Vomiting</option>
+                    <option value="fatigue">Fatigue</option>
+                    <option value="headache">Headache</option>
+                    <option value="nausea">Nausea</option>
+                    <option value="loss_of_appetite">Loss of Appetite</option>
+                    <option value="abdominal_pain">Abdominal Pain</option>
+                    <option value="yellowish_skin">Yellowish Skin</option>
+                </select>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- This section will display the prediction result -->
+        <div class="result-container" id="result">
+            <h2>Prediction Result</h2>
+            <p>The predicted disease will appear here.</p>
+            <p class="disclaimer"><strong>Disclaimer:</strong> This is an AI-generated prediction and not a substitute for professional medical advice.</p>
+        </div>
+    </div>
+</body>
+</html>
